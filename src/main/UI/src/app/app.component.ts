@@ -3,11 +3,6 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {HttpClient, HttpResponse,HttpHeaders} from "@angular/common/http";
 import { Observable } from 'rxjs';
 import {map} from "rxjs/operators";
-
-
-
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -78,29 +73,18 @@ export class AppComponent implements OnInit{
   }*/
 
     getAll(): Observable<any> {
-
-
        return this.httpClient.get(this.baseURL + '/room/reservation/v1?checkin='+ this.currentCheckInVal + '&checkout='+this.currentCheckOutVal, {responseType: 'json'});
     }
-
   }
-
-
-
 export interface Roomsearch{
     checkin:string;
     checkout:string;
   }
-
-
-
-
 export interface Room{
   id:string;
   roomNumber:string;
   price:string;
   links:string;
-
 }
 export class ReserveRoomRequest {
   roomId:string;

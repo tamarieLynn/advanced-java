@@ -39,11 +39,8 @@ import java.util.Optional;
 @CrossOrigin
 public class ReservationResource {
 
-    @Autowired
-    ApplicationContext context;
-
-       // @Autowired
-       // PageableRoomRepository pageableRoomRepository;
+        @Autowired
+        ApplicationContext context;
 
         @Autowired
         RoomRepository roomRepository;
